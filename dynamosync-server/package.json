@@ -1,0 +1,22 @@
+{
+  "name": "dynamosync-server",
+  "version": "1.0.8",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "rimraf lib/* && babel src -d lib",
+    "prepublish": "npm run compile"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.9.0",
+    "rimraf": "^2.5.4"
+  },
+  "author": "Siyang Zhao",
+  "license": "ISC"
+}
