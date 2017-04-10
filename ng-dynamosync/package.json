@@ -1,11 +1,15 @@
 {
   "name": "ng-dynamosync",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Siyang Zhao",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/socket.io-client": "^1.4.29",
+    "socket.io-client": "^1.7.3"
+  }
 }

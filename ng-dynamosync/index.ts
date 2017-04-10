@@ -80,7 +80,8 @@ export class NgDynamoSync {
 
   toObservable(): Observable<any> {
     let observable = this.obs.filter(record => {
-      return (record && record.eventName === undefined) || this.allowedEventNames.indexOf(record.eventName) >= 0;
+      const eventName = record.eventName || EventName.INIT;
+      return this.allowedEventNames.indexOf(eventName) >= 0;
     });
 
     if (this.shouldSimplifyItem) {
