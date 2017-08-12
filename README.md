@@ -24,6 +24,7 @@ Also, you will need to create AWS lambda from the zip file, for downloading the 
 ```npm install forwarder``` and get the zip file from your node_modules
 
 ### Get Started
+#### Step0: [Setting up AWS credentials](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/loading-node-credentials-shared.html)
 #### Step1: Creating AWS Lambda:
  ##### step1.1: create a Lambda by uploading the forwarder zip file 
  ##### step1.2: add two environment variables: 
