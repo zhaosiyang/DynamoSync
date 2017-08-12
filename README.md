@@ -25,10 +25,10 @@ Also, you will need to create AWS lambda from the zip file, for downloading the 
  ##### step1.1: create a Lambda by uploading the forwarder zip file 
  ##### step1.2: add two environment variables: 
     - TABLE_NAME  (Your DynamoDB table name)
-    - URL  (Your NodeJS server URL)
+    - URL  (Your NodeJS server URL, e.g. 12.345.6.789:8080)
  ##### step1.3: Connect DynamoDB table with the lambda function by setting a trigger in AWS console so that any updates on the specified table will trigger the lambda function you have just set.
 
-#### Step2: Server side (NodeJS):
+#### Step2: Server side (NodeJS + Express):
 ##### step2.1:  import Dynamosync class
 ```import {DynamoSync} from 'dynamosync-server';```
 ##### step2.2: configure app object
@@ -50,3 +50,5 @@ const subscription1 = new NgDynamoSync('ShoppingList',this.serverDomain).bindToL
 }
 #### You are done!
 By doing the above steps, you have successfully binded the Angular variable this.shoppingItems to the documents of the table ShoppingList in DynamoDB
+
+#### if you have more questions, feel free to get help by emailing to kern_zhao@126.com
