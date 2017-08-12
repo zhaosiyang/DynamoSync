@@ -1,5 +1,8 @@
 # DynamoSync
 
+### Demo link (http://dynamosync-demo.zhaosiyang.com)
+### Demo repo (https://github.com/zhaosiyang/DynamoSync-demo)
+
 ### What is DynamoSync?
 Dynamosync is a package that allows developer to bind DynamoDB with frontend variable in Angular so that the frontend variable reflects the immediate state of DynamoDB tables. (You can think of it as a light "Firebase" of DynamoDB)
 
