@@ -1,0 +1,103 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/zhaosiyang/.nvm/versions/node/v6.9.1/bin/node',
+1 verbose cli   '/Users/zhaosiyang/.nvm/versions/node/v6.9.1/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/zhaosiyang/Desktop/DynamoSync/dynamosync-forwarder',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/zhaosiyang/.npm/forwarder/1.0.9/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/zhaosiyang/.npm correctMkdir not in flight; initializing
+10 info lifecycle forwarder@1.0.9~prepublish: forwarder@1.0.9
+11 silly lifecycle forwarder@1.0.9~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/zhaosiyang/.npm/forwarder/1.0.9/package.tgz',
+12 verbose tar pack   '/Users/zhaosiyang/Desktop/DynamoSync/dynamosync-forwarder' ]
+13 verbose tarball /Users/zhaosiyang/.npm/forwarder/1.0.9/package.tgz
+14 verbose folder /Users/zhaosiyang/Desktop/DynamoSync/dynamosync-forwarder
+15 verbose addLocalTarball adding from inside cache /Users/zhaosiyang/.npm/forwarder/1.0.9/package.tgz
+16 verbose correctMkdir /Users/zhaosiyang/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd forwarder@1.0.9
+18 verbose afterAdd /Users/zhaosiyang/.npm/forwarder/1.0.9/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/zhaosiyang/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/zhaosiyang/.npm/forwarder/1.0.9/package/package.json written
+21 silly publish { name: 'forwarder',
+21 silly publish   version: '1.0.9',
+21 silly publish   description: '1. forwarder 2. ng-dynamosync 3. dynamosync-server # Please go to [https://github.com/zhaosiyang/DynamoSync](https://github.com/zhaosiyang/DynamoSync) for detailed information about how to use them as a whole.',
+21 silly publish   main: 'forwarder.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   author: '',
+21 silly publish   license: 'ISC',
+21 silly publish   dependencies: { request: '^2.81.0' },
+21 silly publish   readme: '### Dynamosync consists of: \n1. forwarder\n2. ng-dynamosync\n3. dynamosync-server\n# Please go to [https://github.com/zhaosiyang/DynamoSync](https://github.com/zhaosiyang/DynamoSync) for detailed information about how to use them as a whole.',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   _id: 'forwarder@1.0.9',
+21 silly publish   _shasum: '9aa0153654712e9044ac80ee98ced901c2caef02',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name forwarder
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'forwarder',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'forwarder',
+26 silly mapToRegistry   name: 'forwarder',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/forwarder
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/zhaosiyang/.npm/forwarder/1.0.9/package.tgz
+30 verbose request uri https://registry.npmjs.org/forwarder
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 5:14:39 PM
+33 verbose request using bearer token for auth
+34 verbose request id 57af5d4826a0ff54
+35 http request PUT https://registry.npmjs.org/forwarder
+36 http 403 https://registry.npmjs.org/forwarder
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '103',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Sat, 12 Aug 2017 21:14:43 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-yyz8333-YYZ',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1502572480.671253,VS0,VE3710',
+37 verbose headers   vary: 'Accept-Encoding, Accept' }
+38 verbose request invalidating /Users/zhaosiyang/.npm/registry.npmjs.org/forwarder on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: you do not have permission to publish "forwarder". Are you logged in as the correct user? : forwarder
+40 verbose stack     at makeError (/Users/zhaosiyang/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/Users/zhaosiyang/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at Request._callback (/Users/zhaosiyang/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 verbose stack     at Request.self.callback (/Users/zhaosiyang/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/Users/zhaosiyang/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/Users/zhaosiyang/.nvm/versions/node/v6.9.1/lib/node_modules/npm/node_modules/request/request.js:965:12)
+41 verbose statusCode 403
+42 verbose pkgid forwarder
+43 verbose cwd /Users/zhaosiyang/Desktop/DynamoSync/dynamosync-forwarder
+44 error Darwin 16.6.0
+45 error argv "/Users/zhaosiyang/.nvm/versions/node/v6.9.1/bin/node" "/Users/zhaosiyang/.nvm/versions/node/v6.9.1/bin/npm" "publish"
+46 error node v6.9.1
+47 error npm  v3.10.8
+48 error code E403
+49 error you do not have permission to publish "forwarder". Are you logged in as the correct user? : forwarder
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]

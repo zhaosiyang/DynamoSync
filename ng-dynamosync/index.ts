@@ -109,6 +109,24 @@ export class NgDynamoSync {
       }
     })
   }
+  getObjectStream(keyName: string, keyValue: any): Observable<any> {
+    return this.obs
+      .map(NgDynamoSync.simplifyRecordsMapper)
+      .filter(item => item.eventName === EventName.INIT || (<any>item).Keys[keyName] === keyValue)
+      .map(item => {
+        switch (item.eventName) {
+          case EventName.INIT:
+            const filtered = (<InitItems>item).Items.filter(i => i[keyName] === keyValue);
+            return filtered.length === 0 ? null : filtered[0];
+          case EventName.INSERT:
+            return (<InsertedItem>item).NewImage;
+          case EventName.MODIFY:
+            return (<ModifiedItem>item).NewImage;
+          case EventName.REMOVE:
+            return null;
+        }
+      });
+  }
 
   private findIndexFromArrayByKeys(list: any[], keyObject: any): number {
     const keys = Object.keys(keyObject);
