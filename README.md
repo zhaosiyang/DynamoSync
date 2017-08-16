@@ -69,4 +69,4 @@ notes:
 '1.23.456.789:8080' should be replaced by the node server url
 don't forget to unsubscribe the ```subscription``` when your view get destroyed
 
-#### if you have more questions, feel free to get help by emailing to kern_zhao@126.com
+#### If you have questions or suggestions, please raise an issue, I will get to you asap.
