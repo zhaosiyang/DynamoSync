@@ -56,4 +56,17 @@ const subscription1 = new NgDynamoSync('ShoppingList',this.serverDomain).bindToL
 #### You are done!
 By doing the above steps, you have successfully binded the Angular variable this.shoppingItems to the documents of the table ShoppingList in DynamoDB
 
+
+## Binding examples for ng-dynamosync
+1. bind list variable ```l``` to dynamoDB table "Games"
+```this.subscription = new NgDynamoSync('Games','1.23.456.789:8080').bindToListModel(this.shoppingItems);```
+2. bind an variable ```t``` to dynamoDB single object in table "Games", with key to be "gameId" and value to be "456".
+```this.subscription = new NgDynamoSync('Games', '1.23.456.789:8080').getObjectStream('gameId', '456').subscribe(game => this.t = game)```
+3. bind list variable ```chats``` to dynamoDB table "Chats", only allow INSERT event (without previous chats initialized).
+```this.sub2 = new NgDynamoSync('Chat', '1.23.456.789:8080').onlyAllowEventNames(EventName.INSERT).bindToListModel(this.chats);``` 
+
+notes: 
+'1.23.456.789:8080' should be replaced by the node server url
+don't forget to unsubscribe the ```subscription``` when your view get destroyed
+
 #### if you have more questions, feel free to get help by emailing to kern_zhao@126.com
