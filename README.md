@@ -1,7 +1,7 @@
 # DynamoSync
 
 ### Short tutorial (https://www.youtube.com/watch?v=10eev5FyduQ&t=6s)
-### Demo link (http://dynamosync-demo.zhaosiyang.com)
+### Demo link (http://dynamosync-demo.zhaosiyang.com:8080)
 ### Demo repo (https://github.com/zhaosiyang/DynamoSync-demo)
 
 ### What is DynamoSync?
