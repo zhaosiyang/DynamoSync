@@ -1,5 +1,6 @@
 # DynamoSync
 
+### Short tutorial (https://www.youtube.com/watch?v=10eev5FyduQ&t=6s)
 ### Demo link (http://dynamosync-demo.zhaosiyang.com)
 ### Demo repo (https://github.com/zhaosiyang/DynamoSync-demo)
 
